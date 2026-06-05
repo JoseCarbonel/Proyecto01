@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaResourcesProject</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#f8f9fb;--surface:#fff;--border:#e2e6ea;--primary:#1f4980;--primary-light:#4472c4;--accent:#1d9e75;--danger:#e24b4a;--warn:#ef9f27;--text:#1a1a2e;--muted:#6b7280;--radius:10px;--shadow:0 2px 8px rgba(0,0,0,.08)}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:14px}
+  header{background:var(--primary);color:#fff;padding:1rem 2rem;display:flex;align-items:center;gap:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+  header h1{font-size:18px;font-weight:600}
+  header span{font-size:12px;opacity:.7;background:rgba(255,255,255,.15);padding:2px 8px;border-radius:20px}
+  nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;gap:0;overflow-x:auto}
+  nav button{padding:12px 18px;border:none;background:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s}
+  nav button.active{color:var(--primary);border-bottom-color:var(--primary)}
+  nav button:hover{color:var(--primary);background:rgba(68,114,196,.05)}
+  main{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+  .tab{display:none}.tab.active{display:block}
+  h2{font-size:16px;font-weight:600;color:var(--primary);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+  h2 svg{width:18px;height:18px;flex-shrink:0}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+  label{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-bottom:4px;margin-top:10px}
+  label:first-child{margin-top:0}
+  input,select{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:13px;background:#fff;color:var(--text)}
+  input:focus,select:focus{outline:none;border-color:var(--primary-light)}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s}
+  .btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:#163a6b}
+  .btn-success{background:var(--accent);color:#fff}.btn-success:hover{background:#0f6e56}
+  .btn-danger{background:var(--danger);color:#fff}.btn-danger:hover{background:#a32d2d}
+  .btn-secondary{background:#fff;color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{background:var(--bg)}
+  .btn-sm{padding:5px 10px;font-size:12px}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  pre{background:#1e1e2e;color:#cdd6f4;padding:1rem;border-radius:8px;font-size:12px;overflow:auto;max-height:320px;line-height:1.5}
+  pre .key{color:#89b4fa}pre .str{color:#a6e3a1}pre .num{color:#fab387}pre .bool-t{color:#a6e3a1}pre .bool-f{color:#f38ba8}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead th{background:var(--primary);color:#fff;padding:8px 10px;text-align:left;font-weight:500;font-size:12px}
+  tbody tr:nth-child(even){background:#f0f4f9}
+  tbody tr:hover{background:#e8effa}
+  tbody td{padding:7px 10px;border-bottom:1px solid var(--border)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500}
+  .badge-it{background:#dbeafe;color:#1d4ed8}.badge-qa{background:#d1fae5;color:#065f46}
+  .badge-mgmt{background:#fef3c7;color:#92400e}.badge-other{background:#f3f4f6;color:#374151}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin-bottom:1rem}
+  .stat{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.875rem;text-align:center}
+  .stat .val{font-size:22px;font-weight:700;color:var(--primary)}
+  .stat .lbl{font-size:11px;color:var(--muted);margin-top:2px}
+  .tag{background:#e0e7ff;color:#3730a3;padding:2px 7px;border-radius:4px;font-size:11px;margin:2px}
+  .alert{padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px}
+  .alert-ok{background:#d1fae5;color:#065f46;border:1px solid #6ee7b7}
+  .alert-err{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+  .spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .row-actions{display:flex;gap:4px}
+  .section-hint{font-size:12px;color:var(--muted);margin-bottom:12px}
+  .toggle-hint{font-size:11px;color:var(--primary-light);cursor:pointer;text-decoration:underline}
+  .chip-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  @media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  <div>
+    <h1>JavaResourcesProject</h1>
+  </div>
+  <span style="margin-left:auto">Spring Boot · Puerto 8080</span>
+</header>
+
+<nav>
+  <button class="active" onclick="showTab('employees',this)">👥 Empleados</button>
+  <button onclick="showTab('guava',this)">⚡ Guava</button>
+  <button onclick="showTab('excel',this)">📊 Excel POI</button>
+  <button onclick="showTab('security',this)">🔒 Seguridad</button>
+  <button onclick="showTab('logs',this)">📋 Logs</button>
+</nav>
+
+<main>
+
+<!-- ===== TAB: EMPLEADOS ===== -->
+<div id="tab-employees" class="tab active">
+  <div class="stat-grid" id="stats-bar"></div>
+
+  <div class="grid2">
+    <div>
+      <div class="card">
+        <h2>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Nuevo Empleado
+        </h2>
+        <div id="form-alert"></div>
+        <div class="grid2">
+          <div><label>Nombre</label><input id="f-name" placeholder="María García"></div>
+          <div><label>Email</label><input id="f-email" placeholder="m.garcia@empresa.com"></div>
+        </div>
+        <div class="grid2">
+          <div><label>Departamento</label>
+            <select id="f-dept">
+              <option>IT</option><option>QA</option><option>MANAGEMENT</option><option>FINANCE</option><option>MARKETING</option>
+            </select>
+          </div>
+          <div><label>Rol</label><select id="f-role"></select></div>
+        </div>
+        <div class="grid2">
+          <div><label>Salario (S/)</label><input id="f-salary" type="number" placeholder="5000"></div>
+          <div><label>Skills (separadas por coma)</label><input id="f-skills" placeholder="Java, Spring Boot"></div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" onclick="createEmployee()">
+            <span>+ Agregar</span>
+          </button>
+          <button class="btn btn-secondary" onclick="clearForm()">Limpiar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🔍 Buscar por ID</h2>
+        <div style="display:flex;gap:8px">
+          <input id="search-id" type="number" placeholder="Ej: 1" style="width:120px">
+          <button class="btn btn-secondary" onclick="searchById()">Buscar</button>
+        </div>
+        <pre id="search-result" style="margin-top:10px;display:none"></pre>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)">
+        <h2 style="margin:0">Lista de Empleados</h2>
+        <button class="btn btn-secondary btn-sm" onclick="loadEmployees()">↻ Actualizar</button>
+      </div>
+      <div style="overflow-x:auto">
+        <table id="emp-table">
+          <thead><tr><th>ID</th><th>Nombre</th><th>Depto</th><th>Rol</th><th>Salario</th><th></th></tr></thead>
+          <tbody id="emp-body"><tr><td colspan="6" style="text-align:center;padding:20px;color:var(--muted)">Cargando...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB: GUAVA ===== -->
+<div id="tab-guava" class="tab">
+  <p class="section-hint">Demos interactivas de las estructuras de datos de Google Guava usadas en el proyecto.</p>
+  <div class="grid2">
+
+    <div class="card">
+      <h2>⚡ Cache Stats (CacheBuilder)</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">El caché se llena al buscar empleados. Cada búsqueda por ID registra hit o miss.</p>
+      <div class="stat-grid" id="cache-stats-grid"></div>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="loadCacheStats()">Consultar stats</button>
+        <button class="btn btn-secondary" onclick="simulateCacheHits()">Simular búsquedas</button>
+      </div>
+      <pre id="cache-stats-raw" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card">
+      <h2>🗂️ Multimap — por Departamento</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Un key (dept) → múltiples empleados. Estructura nativa de Guava.</p>
+      <label>Departamento</label>
+      <select id="dept-filter">
+        <option value="IT">IT</option><option value="QA">QA</option>
+        <option value="MANAGEMENT">MANAGEMENT</option><option value="FINANCE">FINANCE</option>
+      </select>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="loadByDept()">Consultar Multimap</button>
+      </div>
+      <pre id="dept-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card">
+      <h2>📐 Table — Org Chart (dept × rol)</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Guava Table&lt;Dept, Rol, Lista&gt; — estructura bidimensional.</p>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="loadOrgTable()">Ver Tabla Organizacional</button>
+      </div>
+      <div id="org-table-grid" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card">
+      <h2>🏆 Ordering — Top Salarios</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Guava Ordering.from(Comparator) — ordenación declarativa.</p>
+      <label>Top N empleados</label>
+      <input id="top-n" type="number" value="3" min="1" max="10" style="width:80px">
+      <div class="actions">
+        <button class="btn btn-primary" onclick="loadTopEarners()">Ver Top Salarios</button>
+      </div>
+      <pre id="top-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== TAB: EXCEL POI ===== -->
+<div id="tab-excel" class="tab">
+  <div class="grid2">
+    <div class="card">
+      <h2>📊 Generar Reporte Excel</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px">
+        Genera un archivo <strong>.xlsx</strong> con Apache POI XSSF incluyendo:
+      </p>
+      <ul style="font-size:13px;color:var(--muted);margin-left:18px;line-height:2">
+        <li>Hoja <strong>Empleados</strong>: encabezados con color, filas alternas, formato de moneda</li>
+        <li>Hoja <strong>Resumen</strong>: headcount y planilla por departamento</li>
+        <li>Fila de título fusionada y filtros automáticos</li>
+        <li>Sanitización contra Excel Injection (=, +, -, @)</li>
+      </ul>
+      <div class="actions" style="margin-top:16px">
+        <button class="btn btn-success" onclick="downloadExcel()" id="btn-excel">
+          ⬇ Descargar .xlsx
+        </button>
+      </div>
+      <div id="excel-status" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card">
+      <h2>🛡️ Prueba Excel Injection</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px">
+        Crea un empleado con nombre que empieza con <code>=</code> o <code>+</code>.
+        El servicio lo sanitiza antes de escribirlo en la celda.
+      </p>
+      <label>Nombre con inyección</label>
+      <input id="inject-name" value="=SUM(A1:A100)">
+      <label>Email</label>
+      <input id="inject-email" value="test@empresa.com">
+      <div class="actions">
+        <button class="btn btn-danger" onclick="testInjection()">Probar Sanitización</button>
+      </div>
+      <pre id="inject-result" style="margin-top:10px;display:none"></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB: SEGURIDAD ===== -->
+<div id="tab-security" class="tab">
+  <div class="grid2">
+
+    <div class="card">
+      <h2>🔐 Hashing SHA-256</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Guava Hashing vs Commons DigestUtils — mismo resultado.</p>
+      <label>Texto a hashear</label>
+      <input id="hash-input" value="miContraseña123!" placeholder="Ingresa un texto">
+      <div class="actions"><button class="btn btn-primary" onclick="doHash()">Generar Hash</button></div>
+      <pre id="hash-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card">
+      <h2>✍️ HMAC-SHA256 (Firma)</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Firma y verifica integridad de datos. Comparación en tiempo constante.</p>
+      <label>Datos a firmar</label>
+      <input id="hmac-input" value="empleado:5:salario:9500">
+      <div class="actions"><button class="btn btn-primary" onclick="doHmac()">Firmar y Verificar</button></div>
+      <pre id="hmac-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card">
+      <h2>🔄 Base64 (Commons Codec)</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Codificación/decodificación Base64.</p>
+      <label>Texto a codificar</label>
+      <input id="b64-input" value="usuario:contraseña-secreta">
+      <div class="actions"><button class="btn btn-primary" onclick="doBase64()">Codificar</button></div>
+      <pre id="b64-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card">
+      <h2>🎲 Token Seguro</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">RandomStringUtils.randomAlphanumeric — tokens de sesión.</p>
+      <label>Longitud del token</label>
+      <input id="token-len" type="number" value="32" min="8" max="128" style="width:100px">
+      <div class="actions"><button class="btn btn-primary" onclick="doToken()">Generar Token</button></div>
+      <pre id="token-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+    <div class="card" style="grid-column:1/-1">
+      <h2>✅ Validación de Entradas</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px">
+        Valida email con regex, detecta caracteres peligrosos y enmascara PII en logs.
+        Prueba con <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> para ver el bloqueo.
+      </p>
+      <div class="grid2">
+        <div><label>Email a validar</label><input id="val-email" value="usuario@empresa.com"></div>
+        <div><label>Input a validar</label><input id="val-input" value="Texto normal seguro"></div>
+      </div>
+      <div class="actions"><button class="btn btn-primary" onclick="doValidate()">Validar</button></div>
+      <pre id="val-result" style="margin-top:10px;display:none"></pre>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== TAB: LOGS ===== -->
+<div id="tab-logs" class="tab">
+  <div class="card">
+    <h2>📋 Información de Logback + MDC</h2>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px">
+      Cada petición REST enriquece el hilo con contexto MDC. Los logs se escriben en
+      <code>logs/app.log</code> con el patrón configurado en <code>application.properties</code>.
+    </p>
+
+    <div class="grid3">
+      <div class="stat"><div class="val" id="log-requests">0</div><div class="lbl">Peticiones totales</div></div>
+      <div class="stat"><div class="val" id="log-port">8080</div><div class="lbl">Puerto activo</div></div>
+      <div class="stat"><div class="val" id="log-employees">0</div><div class="lbl">Empleados en memoria</div></div>
+    </div>
+
+    <h2 style="margin-top:1rem">📝 Appenders configurados</h2>
+    <table>
+      <thead><tr><th>Appender</th><th>Destino</th><th>Nivel</th><th>Patrón</th></tr></thead>
+      <tbody>
+        <tr><td><code>CONSOLE</code></td><td>Consola NetBeans</td><td>DEBUG+</td><td>timestamp [thread] [reqId] level logger - msg</td></tr>
+        <tr><td><code>FILE</code></td><td>logs/app.log</td><td>INFO+</td><td>timestamp [thread] [userId] [reqId] level logger - msg</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:1rem">🏷️ MDC Keys activas</h2>
+    <div class="chip-row">
+      <span class="badge badge-it">requestId</span>
+      <span class="badge badge-qa">operation</span>
+      <span class="badge badge-mgmt">userId</span>
+    </div>
+
+    <div class="actions" style="margin-top:1rem">
+      <button class="btn btn-primary" onclick="loadLogInfo()">↻ Actualizar info</button>
+      <button class="btn btn-secondary" onclick="triggerAllOps()">▶ Ejecutar todas las demos</button>
+    </div>
+    <div id="log-alert" style="margin-top:10px"></div>
+  </div>
+</div>
+
+</main>
+
+<script>
+let requestCount = 0;
+
+async function api(method, path, body) {
+  requestCount++;
+  document.getElementById('log-requests').textContent = requestCount;
+  const opts = { method, headers: {'Content-Type':'application/json'} };
+  if (body) opts.body = JSON.stringify(body);
+  const r = await fetch(path, opts);
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+}
+
+function highlight(obj) {
+  return JSON.stringify(obj, null, 2)
+    .replace(/"([^"]+)":/g, '<span class="key">"$1"</span>:')
+    .replace(/: "([^"]*)"/g, ': <span class="str">"$1"</span>')
+    .replace(/: (\d+\.?\d*)/g, ': <span class="num">$1</span>')
+    .replace(/: true/g, ': <span class="bool-t">true</span>')
+    .replace(/: false/g, ': <span class="bool-f">false</span>');
+}
+
+function showPre(id, data) {
+  const el = document.getElementById(id);
+  el.innerHTML = highlight(data);
+  el.style.display = 'block';
+}
+
+function deptBadge(d) {
+  const cls = d==='IT'?'badge-it':d==='QA'?'badge-qa':d==='MANAGEMENT'?'badge-mgmt':'badge-other';
+  return `<span class="badge ${cls}">${d}</span>`;
+}
+
+// ---- EMPLOYEES ----
+async function loadEmployees() {
+  const emps = await api('GET', '/api/employees');
+  document.getElementById('emp-body').innerHTML = emps.map(e => `
+    <tr>
+      <td><code>${e.id}</code></td>
+      <td><strong>${e.name}</strong></td>
+      <td>${deptBadge(e.department)}</td>
+      <td>${e.role}</td>
+      <td>S/ ${e.salary.toLocaleString()}</td>
+      <td class="row-actions">
+        <button class="btn btn-secondary btn-sm" onclick='showEmpDetail(${JSON.stringify(e)})'>Ver</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteEmployee(${e.id})">✕</button>
+      </td>
+    </tr>`).join('');
+  loadStats(emps);
+}
+
+function loadStats(emps) {
+  const depts = [...new Set(emps.map(e=>e.department))].length;
+  const totalSalary = emps.reduce((s,e)=>s+e.salary,0);
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat"><div class="val">${emps.length}</div><div class="lbl">Empleados</div></div>
+    <div class="stat"><div class="val">${depts}</div><div class="lbl">Departamentos</div></div>
+    <div class="stat"><div class="val">S/ ${Math.round(totalSalary/emps.length).toLocaleString()}</div><div class="lbl">Salario Promedio</div></div>
+    <div class="stat"><div class="val">S/ ${totalSalary.toLocaleString()}</div><div class="lbl">Planilla Total</div></div>`;
+  document.getElementById('log-employees').textContent = emps.length;
+}
+
+function showEmpDetail(e) {
+  const el = document.getElementById('search-result');
+  el.innerHTML = highlight(e); el.style.display='block';
+}
+
+async function createEmployee() {
+  const alertEl = document.getElementById('form-alert');
+  try {
+    const skills = document.getElementById('f-skills').value.split(',').map(s=>s.trim()).filter(Boolean);
+    const emp = await api('POST', '/api/employees', {
+      name: document.getElementById('f-name').value,
+      email: document.getElementById('f-email').value,
+      department: document.getElementById('f-dept').value,
+      role: document.getElementById('f-role').value,
+      salary: parseFloat(document.getElementById('f-salary').value) || 0,
+      skills
+    });
+    alertEl.innerHTML = `<div class="alert alert-ok">✓ Empleado <strong>${emp.name}</strong> creado con ID ${emp.id}</div>`;
+    clearForm(); loadEmployees();
+    setTimeout(()=>alertEl.innerHTML='', 3000);
+  } catch(err) {
+    alertEl.innerHTML = `<div class="alert alert-err">✗ ${err.message}</div>`;
+  }
+}
+
+function clearForm() {
+  ['f-name','f-email','f-salary','f-skills'].forEach(id=>document.getElementById(id).value='');
+}
+
+async function deleteEmployee(id) {
+  if (!confirm(`¿Eliminar empleado ID ${id}?`)) return;
+  await api('DELETE', `/api/employees/${id}`);
+  loadEmployees();
+}
+
+async function searchById() {
+  const id = document.getElementById('search-id').value;
+  try {
+    const emp = await api('GET', `/api/employees/${id}`);
+    showPre('search-result', emp);
+  } catch { showPre('search-result', {error: 'No encontrado'}); }
+}
+
+async function loadRoles() {
+  const roles = await api('GET', '/api/employees/roles');
+  const sel = document.getElementById('f-role');
+  sel.innerHTML = roles.map(r=>`<option>${r}</option>`).join('');
+}
+
+// ---- GUAVA ----
+async function loadCacheStats() {
+  const s = await api('GET', '/api/employees/cache/stats');
+  document.getElementById('cache-stats-grid').innerHTML = `
+    <div class="stat"><div class="val">${s.hits}</div><div class="lbl">Cache Hits</div></div>
+    <div class="stat"><div class="val">${s.misses}</div><div class="lbl">Cache Misses</div></div>
+    <div class="stat"><div class="val">${s.hitRate}%</div><div class="lbl">Hit Rate</div></div>
+    <div class="stat"><div class="val">${s.size}</div><div class="lbl">Entradas</div></div>`;
+  showPre('cache-stats-raw', s);
+}
+
+async function simulateCacheHits() {
+  for (let i=1; i<=5; i++) {
+    try { await api('GET', `/api/employees/${i}`); } catch {}
+    await api('GET', '/api/employees/1');
+  }
+  await loadCacheStats();
+}
+
+async function loadByDept() {
+  const dept = document.getElementById('dept-filter').value;
+  const emps = await api('GET', `/api/employees/department/${dept}`);
+  showPre('dept-result', emps.map(e=>({id:e.id,name:e.name,role:e.role,salary:e.salary})));
+}
+
+async function loadOrgTable() {
+  const table = await api('GET', '/api/employees/orgtable');
+  let html = '<table><thead><tr><th>Departamento</th><th>Rol</th><th>Cantidad</th></tr></thead><tbody>';
+  for (const [dept, roles] of Object.entries(table)) {
+    for (const [role, count] of Object.entries(roles)) {
+      html += `<tr><td>${deptBadge(dept)}</td><td><code>${role}</code></td><td>${count}</td></tr>`;
+    }
+  }
+  document.getElementById('org-table-grid').innerHTML = html + '</tbody></table>';
+}
+
+async function loadTopEarners() {
+  const n = document.getElementById('top-n').value || 3;
+  const top = await api('GET', `/api/employees/top/${n}`);
+  showPre('top-result', top.map((e,i)=>({rank:i+1, name:e.name, salary:`S/ ${e.salary.toLocaleString()}`, dept:e.department})));
+}
+
+// ---- EXCEL ----
+async function downloadExcel() {
+  const btn = document.getElementById('btn-excel');
+  const status = document.getElementById('excel-status');
+  btn.innerHTML = '<span class="spinner"></span> Generando...';
+  btn.disabled = true;
+  try {
+    const r = await fetch('/api/reports/excel');
+    const blob = await r.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'Empleados_Reporte.xlsx'; a.click();
+    URL.revokeObjectURL(url);
+    status.innerHTML = '<div class="alert alert-ok">✓ Archivo descargado. Ábrelo en Excel para ver los estilos, la hoja Resumen y los filtros automáticos.</div>';
+  } catch(e) {
+    status.innerHTML = `<div class="alert alert-err">✗ Error: ${e.message}</div>`;
+  } finally {
+    btn.innerHTML = '⬇ Descargar .xlsx'; btn.disabled = false;
+  }
+}
+
+async function testInjection() {
+  try {
+    const emp = await api('POST', '/api/employees', {
+      name: document.getElementById('inject-name').value,
+      email: document.getElementById('inject-email').value,
+      department: 'IT', role: 'DEVELOPER', salary: 1000, skills:[]
+    });
+    showPre('inject-result', {
+      mensaje: 'Empleado creado. Descarga el Excel y verifica que la celda muestra \'=... en lugar de ejecutar la fórmula.',
+      nombre_guardado: emp.name,
+      id: emp.id
+    });
+    loadEmployees();
+  } catch(e) { showPre('inject-result', {error: e.message}); }
+}
+
+// ---- SECURITY ----
+async function doHash() {
+  const r = await api('POST', '/api/security/hash', {input: document.getElementById('hash-input').value});
+  showPre('hash-result', r);
+}
+async function doHmac() {
+  const r = await api('POST', '/api/security/hmac', {data: document.getElementById('hmac-input').value});
+  showPre('hmac-result', r);
+}
+async function doBase64() {
+  const r = await api('POST', '/api/security/base64', {input: document.getElementById('b64-input').value});
+  showPre('b64-result', r);
+}
+async function doToken() {
+  const r = await api('GET', `/api/security/token?length=${document.getElementById('token-len').value}`);
+  showPre('token-result', r);
+}
+async function doValidate() {
+  const r = await api('POST', '/api/security/validate', {
+    email: document.getElementById('val-email').value,
+    input: document.getElementById('val-input').value
+  });
+  showPre('val-result', r);
+}
+
+// ---- LOGS ----
+async function loadLogInfo() {
+  const emps = await api('GET', '/api/employees');
+  document.getElementById('log-employees').textContent = emps.length;
+  document.getElementById('log-requests').textContent = requestCount;
+}
+
+async function triggerAllOps() {
+  const el = document.getElementById('log-alert');
+  el.innerHTML = '<div class="alert alert-ok">Ejecutando operaciones... revisa la consola de NetBeans para ver los logs MDC en tiempo real.</div>';
+  await api('GET', '/api/employees');
+  await api('GET', '/api/employees/1');
+  await api('GET', '/api/employees/cache/stats');
+  await api('GET', '/api/employees/top/3');
+  await api('POST', '/api/security/hash', {input:'test'});
+  await api('POST', '/api/security/hmac', {data:'test-data'});
+  await api('GET', '/api/employees/orgtable');
+  loadLogInfo();
+}
+
+function showTab(name, btn) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Init
+loadRoles();
+loadEmployees();
+</script>
+</body>
+</html>

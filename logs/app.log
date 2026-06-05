@@ -1,0 +1,233 @@
+2026-05-28T12:42:57.185-05:00  INFO 5340 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Starting JavaResourcesApp using Java 20.0.2 with PID 5340 (D:\Data\ProyectosLocal\JavaResourcesProjectWeb\target\classes started by jubar in D:\Data\ProyectosLocal\JavaResourcesProjectWeb)
+2026-05-28T12:42:57.187-05:00 DEBUG 5340 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-05-28T12:42:57.187-05:00  INFO 5340 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T12:42:58.209-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-28T12:42:58.223-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T12:42:58.223-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-05-28T12:42:58.290-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-28T12:42:58.291-05:00  INFO 5340 --- [JavaResourcesProject] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
+2026-05-28T12:42:58.388-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=1 nombre='Maria garcia' dept=IT
+2026-05-28T12:42:58.389-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=2 nombre='Carlos mendoza' dept=IT
+2026-05-28T12:42:58.389-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=3 nombre='Ana torres' dept=QA
+2026-05-28T12:42:58.390-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=4 nombre='Luis ramirez' dept=IT
+2026-05-28T12:42:58.390-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=5 nombre='Sofia paredes' dept=MANAGEMENT
+2026-05-28T12:42:58.390-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=6 nombre='Diego vasquez' dept=IT
+2026-05-28T12:42:58.390-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=7 nombre='Valeria castillo' dept=QA
+2026-05-28T12:42:58.390-05:00  INFO 5340 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Datos de muestra cargados: 7 empleados
+2026-05-28T12:42:58.462-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-28T12:42:58.717-05:00  INFO 5340 --- [JavaResourcesProject] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T12:42:58.727-05:00  INFO 5340 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Started JavaResourcesApp in 1.975 seconds (process running for 2.349)
+2026-05-28T12:44:15.093-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T12:44:15.094-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T12:44:15.096-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-28T12:44:44.167-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Empleado eliminado id=7
+2026-05-28T12:45:41.102-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:41.108-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:41.112-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:41.117-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:41.121-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:41.125-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:41.130-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:41.134-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:41.137-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:41.142-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.555-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.560-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.564-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:44.567-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.571-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:44.575-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.578-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:44.583-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:44.588-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:44.591-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.110-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.114-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.118-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:46.121-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.124-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:46.128-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.132-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:46.135-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.139-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:46.142-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.896-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.899-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.903-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:46.906-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.910-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:46.914-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.918-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:46.922-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:46.927-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:46.931-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.438-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.443-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.447-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:47.450-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.454-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:47.457-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.461-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:47.465-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.469-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:47.472-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.862-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.865-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.868-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:47.871-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.875-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:47.878-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.882-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:47.886-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:47.891-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:47.893-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.088-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.093-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.098-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:48.101-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.104-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:48.109-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.113-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:48.116-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.120-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:48.124-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.292-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.296-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.299-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:48.303-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.307-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:48.311-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.314-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:48.319-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.323-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:48.327-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.488-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.492-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.495-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:48.498-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.501-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:48.504-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.508-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:48.513-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.518-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:48.522-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.676-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.679-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.683-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:48.685-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.689-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:48.692-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.695-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:48.699-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.703-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:48.707-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.875-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.880-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.884-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:45:48.888-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.891-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:45:48.895-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.899-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:45:48.903-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:45:48.907-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:45:48.912-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.289-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.292-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.295-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:19.299-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.303-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:19.306-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.308-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:19.311-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:19.315-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:19.318-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.669-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.672-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.675-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:25.677-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.682-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:25.685-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.688-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:25.693-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:25.696-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:25.699-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.006-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.014-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.018-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:26.021-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.025-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:26.028-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.032-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:26.035-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.037-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:26.041-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.199-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.203-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.205-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:26.208-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.210-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:26.213-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.216-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:26.219-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.222-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:26.227-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.377-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.379-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.382-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:26.385-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.388-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:26.393-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.397-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:26.400-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.403-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:26.407-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.555-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.559-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.562-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.javaresources.service.EmployeeService  : Cache HIT id=2
+2026-05-28T12:46:26.566-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.569-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T12:46:26.573-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.576-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Cache HIT id=4
+2026-05-28T12:46:26.581-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:26.584-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.javaresources.service.EmployeeService  : Cache HIT id=5
+2026-05-28T12:46:26.589-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:46:43.220-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.j.service.ExcelReportService           : Generando Excel: 6 empleados
+2026-05-28T12:46:44.452-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-6] c.j.service.ExcelReportService           : Excel generado en memoria: 5195 bytes
+2026-05-28T12:47:16.579-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.j.security.SecurityService             : Hash SHA-256 generado para input de 16 chars
+2026-05-28T12:47:25.922-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.j.security.SecurityService             : HMAC generado y verificado: true
+2026-05-28T12:47:32.128-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.j.security.SecurityService             : Token seguro generado de 32 chars
+2026-05-28T12:48:34.207-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Cache HIT id=1
+2026-05-28T12:48:34.226-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-1] c.j.security.SecurityService             : Hash SHA-256 generado para input de 4 chars
+2026-05-28T12:48:34.230-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.j.security.SecurityService             : HMAC generado y verificado: true
+2026-05-28T12:49:01.497-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-2] c.javaresources.service.EmployeeService  : Empleado eliminado id=6
+2026-05-28T12:49:37.662-05:00  INFO 5340 --- [JavaResourcesProject] [http-nio-8080-exec-4] c.javaresources.service.EmployeeService  : Empleado registrado id=16 nombre='Juan' dept=IT
+2026-05-28T12:50:18.130-05:00 DEBUG 5340 --- [JavaResourcesProject] [http-nio-8080-exec-3] c.javaresources.service.EmployeeService  : Cache HIT id=3
+2026-05-28T21:54:53.832-05:00  INFO 34668 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Starting JavaResourcesApp using Java 20.0.2 with PID 34668 (D:\Data\ProyectosLocal\JavaResourcesProjectWeb\target\classes started by jubar in D:\Data\ProyectosLocal\JavaResourcesProjectWeb)
+2026-05-28T21:54:53.834-05:00 DEBUG 34668 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-05-28T21:54:53.835-05:00  INFO 34668 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T21:54:55.158-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-28T21:54:55.176-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T21:54:55.177-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-05-28T21:54:55.330-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-28T21:54:55.330-05:00  INFO 34668 --- [JavaResourcesProject] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2026-05-28T21:54:55.469-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=1 nombre='Maria garcia' dept=IT
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=2 nombre='Carlos mendoza' dept=IT
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=3 nombre='Ana torres' dept=QA
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=4 nombre='Luis ramirez' dept=IT
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=5 nombre='Sofia paredes' dept=MANAGEMENT
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=6 nombre='Diego vasquez' dept=IT
+2026-05-28T21:54:55.472-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Empleado registrado id=7 nombre='Valeria castillo' dept=QA
+2026-05-28T21:54:55.473-05:00  INFO 34668 --- [JavaResourcesProject] [main] c.javaresources.service.EmployeeService  : Datos de muestra cargados: 7 empleados
+2026-05-28T21:54:55.548-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-05-28T21:54:55.858-05:00  INFO 34668 --- [JavaResourcesProject] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-28T21:54:55.869-05:00  INFO 34668 --- [JavaResourcesProject] [main] com.javaresources.JavaResourcesApp       : Started JavaResourcesApp in 2.612 seconds (process running for 3.141)
+2026-05-28T21:55:30.027-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T21:55:30.029-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T21:55:30.031-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-28T21:56:07.382-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.javaresources.service.EmployeeService  : Empleado eliminado id=7
+2026-05-28T21:56:42.804-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-8] c.javaresources.service.EmployeeService  : Empleado registrado id=11 nombre='Fdfdfdf' dept=IT
+2026-05-28T22:00:17.130-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.j.service.ExcelReportService           : Generando Excel: 7 empleados
+2026-05-28T22:00:18.612-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-5] c.j.service.ExcelReportService           : Excel generado en memoria: 5275 bytes
+2026-05-28T22:01:30.387-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-7] c.j.security.SecurityService             : Hash SHA-256 generado para input de 16 chars
+2026-05-28T22:02:34.626-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-9] c.j.security.SecurityService             : HMAC generado y verificado: true
+2026-05-28T22:02:47.898-05:00  INFO 34668 --- [JavaResourcesProject] [http-nio-8080-exec-10] c.j.security.SecurityService             : Token seguro generado de 32 chars
